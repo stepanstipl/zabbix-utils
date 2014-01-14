@@ -8,14 +8,14 @@ zabbix-partition.sh
 This is script to generate initial configuration and following daily/monthly updates for partitioning zabbix DB for mysql. Defaul binary is set to `mysql`, if you want to specify path or just se what the script tries to run use `-b` switch.
 
 ### How To:
-- Run initial partitioning like `./zabbix-partition.sh -i -c /etc/zabbix/zabbix_server.conf` (change the -c path to point to the zabbix config file containing your DB credentials).
-- Setup daily cron job to run `./zabbix-partition.sh -c /etc/zabbix/zabbix_server.conf`
+- Run initial partitioning like `zabbix-partition.sh -i -c /etc/zabbix/zabbix_server.conf` (change the -c path to point to the zabbix config file containing your DB credentials).
+- Setup daily cron job to run `zabbix-partition.sh -c /etc/zabbix/zabbix_server.conf`
 
 ### Basic usage:
-- `./zabbix-partition.sh -i` will try to run initially partition the database (this needs to be done before running daily/monthly updates)
-- - `./zabbix-partition.sh` will try to run daily partitioning update with default values
-- `./zabbix-partition.sh -b echo` will print commands that the script tries to run
-- For rest use `./zabbix-partition.sh -h`, which will display help
+- `zabbix-partition.sh -i` will try to initially partition the database (this needs to be done before running daily/monthly updates)
+- `zabbix-partition.sh` will try to run daily partitioning update with default values
+- `zabbix-partition.sh -b echo` will print commands that the script tries to run
+- For rest use `zabbix-partition.sh -h`, which will display help
 
 ```
 zabbix-partition.sh [-i] [-d #] [-e #] [-f #] [-m #] [-n #] [-o #] [-p] [-U #] [-P #] [-D #]
